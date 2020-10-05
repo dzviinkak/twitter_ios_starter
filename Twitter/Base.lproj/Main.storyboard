@@ -58,28 +58,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TweetCell" rowHeight="120" id="hho-bd-1Hl" customClass="TweetCell" customModule="Twitter" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TweetCell" rowHeight="99" id="hho-bd-1Hl" customClass="TweetCell" customModule="Twitter" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="99"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hho-bd-1Hl" id="ZGA-W1-0lz">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bHt-kV-PmB">
-                                            <rect key="frame" x="18" y="11" width="65" height="60"/>
+                                            <rect key="frame" x="18" y="11" width="65" height="65"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="65" id="BGI-zV-eKL"/>
+                                                <constraint firstAttribute="height" constant="65" id="BGI-zV-eKL"/>
                                                 <constraint firstAttribute="width" constant="65" id="l5s-sC-f3a"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Joe Doe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abr-RJ-cfE">
-                                            <rect key="frame" x="91" y="11" width="62.5" height="37"/>
+                                            <rect key="frame" x="91" y="11" width="62.5" height="19"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tweet text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WuL-ag-CcI">
-                                            <rect key="frame" x="91" y="52" width="275" height="68"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tweet text" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WuL-ag-CcI">
+                                            <rect key="frame" x="91" y="31" width="275" height="68"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="68" id="uwz-BY-7z5"/>
                                             </constraints>
@@ -96,9 +96,9 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="WuL-ag-CcI" secondAttribute="trailing" constant="-7" id="emn-e5-FjF"/>
                                         <constraint firstItem="bHt-kV-PmB" firstAttribute="leading" secondItem="ZGA-W1-0lz" secondAttribute="leadingMargin" constant="2" id="iIW-zW-l4p"/>
                                         <constraint firstItem="abr-RJ-cfE" firstAttribute="leading" secondItem="bHt-kV-PmB" secondAttribute="trailing" constant="8" id="kb2-xp-OeA"/>
-                                        <constraint firstItem="WuL-ag-CcI" firstAttribute="top" secondItem="abr-RJ-cfE" secondAttribute="bottom" constant="4" id="qqP-3x-mhv"/>
+                                        <constraint firstItem="WuL-ag-CcI" firstAttribute="top" secondItem="abr-RJ-cfE" secondAttribute="bottom" constant="1" id="qqP-3x-mhv"/>
                                         <constraint firstAttribute="bottom" secondItem="WuL-ag-CcI" secondAttribute="bottom" id="uQL-FV-eSY"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="bHt-kV-PmB" secondAttribute="bottom" constant="38" id="xxR-vh-A5E"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="bHt-kV-PmB" secondAttribute="bottom" constant="12" id="xxR-vh-A5E"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
