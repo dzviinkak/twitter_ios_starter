@@ -73,8 +73,8 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Joe Doe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abr-RJ-cfE">
-                                            <rect key="frame" x="91" y="11" width="70" height="37"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <rect key="frame" x="91" y="11" width="62.5" height="37"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -83,7 +83,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="68" id="uwz-BY-7z5"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -101,6 +101,11 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="bHt-kV-PmB" secondAttribute="bottom" constant="38" id="xxR-vh-A5E"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="profileImageView" destination="bHt-kV-PmB" id="BRi-Xj-PWa"/>
+                                    <outlet property="tweetContent" destination="WuL-ag-CcI" id="P4K-Ns-DC7"/>
+                                    <outlet property="userNameLabel" destination="abr-RJ-cfE" id="XG9-sW-f72"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
