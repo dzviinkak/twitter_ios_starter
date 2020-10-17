@@ -14,7 +14,7 @@ class HomeTableViewController: UITableViewController {
     var numberOfTweets: Int!
     let myRefreshControll = UIRefreshControl()
     
-    
+    // gets called once
     override func viewDidLoad() {
         super.viewDidLoad()
         loadTweets()
@@ -24,7 +24,15 @@ class HomeTableViewController: UITableViewController {
         myRefreshControll.addTarget(self, action: #selector(loadTweets), for: .valueChanged)
         // tells which refreshcontrol to use
         tableView.refreshControl = myRefreshControll
+        self.tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.estimatedRowHeight = 150
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        // super class = view controller
+        super.viewDidAppear(animated)
+        loadTweets()
     }
     //calls API
     @objc func loadTweets(){
@@ -87,6 +95,7 @@ class HomeTableViewController: UITableViewController {
         // saves the dictionary under name user in the API
         let user = tweetArray[indexPath.row ]["user"] as! NSDictionary
         cell.userNameLabel.text = user["name"] as! String
+        //take this away
         cell.tweetContent.text = tweetArray[indexPath.row]["text"] as! String
         // set up the image
         // uses key from user dictionary
@@ -96,6 +105,10 @@ class HomeTableViewController: UITableViewController {
         if let imageData = data {
             cell.profileImageView.image = UIImage(data: imageData)
         }
+        
+        cell.setFavourite(isFavourited: tweetArray[indexPath.row]["favourited"] as! Bool)
+        cell.tweetId = tweetArray[indexPath.row]["id"] as! Int
+        cell.setRetweeted(tweetArray[indexPath.row]["retweeted"] as! Bool)
         
         return cell
     }
